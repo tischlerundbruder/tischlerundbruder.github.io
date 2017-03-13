@@ -1,0 +1,164 @@
+body {
+    background: url("img/background.jpg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.floating-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 200px;
+}
+
+.text {
+    position: relative;
+    top: 180px;
+    left: 125px;
+    background-image: url("img/plus_one.png");
+    width: 43px;
+    height: 41px;
+    visibility: hidden;
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.foreground {
+    animation: animation-foreground 3s infinite;
+}
+
+@keyframes animation-foreground {
+    0% {
+        visibility: visible;
+        opacity: 0;
+        transform: translateY(0px) scale(0.3);
+    }
+
+    3% {
+        opacity: 1;
+        transform: scale(1.0) translateY(-20px);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(1.0) translateY(-170px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    4% {
+        transform: scale(1.1) rotate(14.4deg);
+    }
+
+    6% {
+        transform: scale(1) rotate(21.6deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.logo {
+    width: 230px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orb {
+    margin-top: -208px;
+    width: 186px;
+    height: 186px;
+    background: url(img/orb.png) no-repeat 50% 50%;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.cog {
+    width: 100%;
+    height: 100%;
+    background: url(img/cog.png) no-repeat 50% 50%;
+    background-size: contain;
+    animation: spin 3s linear infinite;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.manabreak {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 90px;
+    margin-top: 50px;
+    background: url(img/manabreak.png) no-repeat 50% 50%;
+}
+
+.about {
+    width: 400px;
+    height: 90px;
+    font-family: "Just Another Hand", sans-serif;
+    margin: 2em auto 100px;
+    font-size: 2em;
+    text-align: center;
+    color: #9BA2AD;
+    line-height: 0.9em;
+}
+
+@media (max-width: 1060px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .cog {
+        transform: scale(0.4);
+    }
+
+    .manabreak {
+        width: 100%;
+        margin-top: 10px;
+        background-size: contain;
+    }
+
+    .about {
+        margin-top: 40px;
+        width: 100%;
+        margin-bottom: 0;
+        font-size: 1.7em;
+    }
+
+    .logo {
+        margin-top: 10px;
+        transform: scale(0.8);
+    }
+
+    .floating-text {
+        visibility: hidden;
+        height: 0;
+    }
+
+    .text {
+        visibility: hidden;
+        animation: none;
+    }
+}

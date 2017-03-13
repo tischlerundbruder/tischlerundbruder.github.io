@@ -1,0 +1,250 @@
+body {
+    background: url("img/background.jpg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.floating-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 200px;
+}
+
+.text {
+    position: relative;
+    top: 180px;
+    left: 125px;
+    background-image: url("img/plus_one.png");
+    width: 43px;
+    height: 41px;
+    visibility: hidden;
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.foreground {
+    animation: animation-foreground 3s infinite;
+}
+
+.background {
+    filter: blur(2px);
+    animation: animation-background 5s infinite;
+}
+
+.left {
+    left: 100px;
+}
+
+.middle {
+    left: 130px;
+}
+
+.right {
+    left: 180px;
+}
+
+@keyframes animation-foreground {
+    0% {
+        visibility: visible;
+        opacity: 0;
+        transform: translateY(0px) scale(0.3);
+    }
+
+    3% {
+        opacity: 1;
+        transform: scale(1.0) translateY(-20px);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(1.0) translateY(-170px);
+    }
+}
+
+@keyframes animation-background {
+    0% {
+        visibility: visible;
+        opacity: 0;
+        transform: scale(0.7) translateY(0px);
+    }
+
+    3% {
+        opacity: 0.4;
+    }
+
+    15% {
+        opacity: 0.4;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(0.7) translateY(-230px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    4% {
+        transform: scale(1.1) rotate(14.4deg);
+    }
+
+    6% {
+        transform: scale(1) rotate(21.6deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes antispin {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.logo {
+    width: 230px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orb {
+    margin-top: -208px;
+    width: 186px;
+    height: 186px;
+    background: url(img/orb.png) no-repeat 50% 50%;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.cog {
+    width: 100%;
+    height: 100%;
+    background: url(img/cog.png) no-repeat 50% 50%;
+    background-size: contain;
+    animation: spin 3s linear infinite;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.manabreak {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 90px;
+    margin-top: 50px;
+    background: url(img/manabreak.png) no-repeat 50% 50%;
+}
+
+.menu {
+    visibility: hidden;
+    height: 70px;
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1); /* IE6-9 */
+}
+
+.menu .item {
+    line-height: 70px;
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #54729C;
+    font-family: "Open Sans", "Arial", sans-serif;
+    transition: 0.5s;
+}
+
+.menu a {
+    text-decoration: none;
+    width: 160px;
+}
+
+.menu .item:hover {
+    color: #5C8BE6;
+}
+
+.about {
+    width: 400px;
+    height: 90px;
+    font-family: "Just Another Hand", sans-serif;
+    margin: 2em auto 100px;
+    font-size: 2em;
+    text-align: center;
+    color: #9BA2AD;
+    line-height: 0.9em;
+}
+
+@media (max-width: 1060px) {
+    .menu {
+        width: 100%;
+    }
+
+    .menu a {
+        width: 33%;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .cog {
+        transform: scale(0.4);
+    }
+
+    .manabreak {
+        width: 100%;
+        margin-top: 10px;
+        background-size: contain;
+    }
+
+    .about {
+        margin-top: 40px;
+        width: 100%;
+        margin-bottom: 0;
+        font-size: 1.7em;
+    }
+
+    .logo {
+        margin-top: 10px;
+        transform: scale(0.8);
+    }
+
+    .floating-text {
+        visibility: hidden;
+        height: 0;
+    }
+
+    .text {
+        visibility: hidden;
+        animation: none;
+    }
+}
