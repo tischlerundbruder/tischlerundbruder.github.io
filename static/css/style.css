@@ -1,0 +1,270 @@
+html {
+    background: hsla(254, 3%, 9%, 1) 50% 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: #b2a29f;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    background: hsla(0, 3%, 14%, 1);
+}
+
+.navigation-wrap {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(30, 27, 27, 0.8);
+    z-index: 1024;
+}
+
+.navigation-wrap .navigation {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 900px;
+    height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navigation-wrap .navigation .item {
+    align-self: flex-end;
+    height: 100%;
+    width: 100px;
+    line-height: 60px;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.navigation-wrap .navigation .item:nth-child(2) {
+    margin-left: auto;
+}
+
+.navigation-wrap .navigation .item:hover {
+    color: hsla(8, 11%, 80%, 1);
+}
+
+.navigation-wrap .navigation .item.cover {
+    align-self: flex-start;
+    display: flex;
+    width: 200px;
+    transition: 0s !important;
+}
+
+.navigation-wrap .navigation .item.cover img {
+    margin: auto 8px auto 10px;
+}
+
+.navigation-wrap .navigation .item.cover:hover {
+    color: hsla(8, 11%, 80%, 1);
+}
+
+@media (max-width: 500px) {
+    .navigation-wrap .navigation .item.cover span {
+        display: none;
+    }
+
+    .navigation-wrap .navigation .item.cover {
+        width: 32px;
+    }
+}
+
+.page-wrap {
+    width: 100%;
+    display: table;
+}
+
+.page-wrap.full-height {
+    min-height: 100vh;
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.page-wrap.full-height .page {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.page-wrap .page {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.page-wrap .page .content {
+    margin: auto auto;
+    max-width: 900px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.page-wrap .page .content h1 {
+    display: block;
+    margin-bottom: 50px;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+.page-wrap#cover {
+    /*noinspection CssUnknownTarget*/
+    background: url(../img/bg.jpg) fixed;
+    background-size: cover;
+    color: hsla(9, 11%, 73%, 1);
+}
+
+.page.cover .content {
+    text-align: center;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+}
+
+.page.cover .content h1 {
+    display: block;
+    font-weight: 400;
+    font-size: 6em;
+    margin-bottom: 40px;
+}
+
+.page.cover .content .motto {
+    display: block;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+.history {
+    text-align: justify;
+    text-justify: inter-word;
+    background: hsla(0, 3%, 16%, 1);
+}
+
+.history .text {
+    /*font-family: "PT Sans", sans-serif;*/
+    font-size: 1.02em;
+    line-height: 1.6em;
+    text-rendering: geometricPrecision;
+}
+
+#gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#gallery-container .image-thumbnail {
+    cursor: pointer;
+}
+
+.pswp__caption__center {
+    width: 100% !important;
+    max-width: 900px !important;
+}
+
+.pswp__caption__center .title {
+    font-size: 1.4em;
+}
+
+.page.contact {
+    background: hsla(0, 3%, 16%, 1);
+}
+
+.page.contact .contact-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page.contact .contact-items .item {
+    margin-right: 20px;
+    min-width: 40%;
+}
+
+.page.contact .item {
+    font-size: 1.2em;
+    display: flex;
+    line-height: 60px;
+    margin-bottom: 30px;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+}
+
+.page.contact .item .icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    margin-right: 1em;
+    text-align: center;
+    color: hsla(0, 3%, 29%, 1);
+}
+
+.page.contact .item .icon-wrap .fa {
+    font-size: 1.4em !important;
+    line-height: 60px;
+}
+
+.page.contact a {
+    color: inherit !important;
+}
+
+.page.footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: hsl(0, 3%, 14%);
+}
+
+.page.footer .first-line {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.page.footer .content {
+    opacity: 0.6;
+    font-family: Tahoma, sans-serif;
+    font-size: 0.8em;
+    color: hsla(0, 4%, 40%, 1);
+    font-weight: 300;
+    text-align: center;
+}
+
+a {
+    color: hsla(0, 4%, 40%, 1);
+}
+
+.button {
+    border: 2px solid #b2a29f;
+    color: #b2a29f;
+    min-height: 3em;
+    border-radius: 0.3em;
+    vertical-align: middle;
+    line-height: 3em;
+    text-align: center;
+    width: 15em;
+    margin: 5em auto auto;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #b2a29f;
+    color: #242222;
+}
+
+a.button-link {
+    text-decoration: none;
+}

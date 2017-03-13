@@ -1,25 +1,291 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-    <style>
-        .cog,.orb,.text{position:relative}.container,.floating-text,.logo,.manabreak,.orb{margin-left:auto;margin-right:auto}body{background:url(img/background.jpg);background-position-x:50%;background-position-y:50%}.floating-text{width:300px;height:200px}.text{top:180px;left:125px;background-image:url(img/plus_one.png);width:43px;height:41px;visibility:hidden;opacity:0;animation-timing-function:cubic-bezier(.25,.46,.45,.94)}.foreground{animation:animation-foreground 3s infinite}@keyframes animation-foreground{0%{visibility:visible;opacity:0;transform:translateY(0) scale(.3)}3%{opacity:1;transform:scale(1) translateY(-20px)}15%{opacity:1}30%{opacity:0;transform:scale(1) translateY(-170px)}}@keyframes spin{0%{transform:scale(1) rotate(0deg)}4%{transform:scale(1.1) rotate(14.4deg)}6%{transform:scale(1) rotate(21.6deg)}100%{transform:scale(1) rotate(360deg)}}.container{width:500px}.logo{width:230px;height:230px}.orb{margin-top:-208px;width:186px;height:186px;background:url(img/orb.png) 50% 50% no-repeat;background-size:contain;z-index:10}.cog{width:100%;height:100%;background:url(img/cog.png) 50% 50% no-repeat;background-size:contain;animation:spin 3s linear infinite;overflow:hidden;z-index:1}.about,.manabreak{width:400px;height:90px}.manabreak{margin-top:50px;background:url(img/manabreak.png) 50% 50% no-repeat}.about{font-family:"Just Another Hand",sans-serif;margin:2em auto 100px;font-size:2em;text-align:center;color:#9BA2AD;line-height:.9em}@media (max-width:1060px){.container{width:100%}}@media (max-width:400px){.cog{transform:scale(.4)}.manabreak{width:100%;margin-top:10px;background-size:contain}.about{margin-top:40px;width:100%;margin-bottom:0;font-size:1.7em}.logo{margin-top:10px;transform:scale(.8)}.floating-text{visibility:hidden;height:0}.text{visibility:hidden;animation:none}}
-    </style>
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet" type="text/css">
+
+    <!-- JQuery -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+
+    <!-- Photoswipe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
+
+    <!-- Gallery -->
+    <script src="static/gallery/gallery.js"></script>
+
+    <title>Tischler &amp; Bruder Official</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="static/img/favicon.png"/>
 </head>
+
 <body>
-<div class="container">
-    <div class="floating-text">
-        <div class="text foreground middle"></div>
+<div class="main">
+    <div class="navigation-wrap">
+        <div class="navigation">
+            <div class="item cover"><img src="static/img/favicon.png"/><span>Tischler Und Bruder</span></div>
+            <div class="item despre-noi">Despre Noi</div>
+            <div class="item galerie">Galerie</div>
+            <div class="item contact">Contact</div>
+        </div>
     </div>
-    <div class="logo">
-        <div class="cog"></div>
-        <div class="orb"></div>
+
+    <div class="page-wrap full-height" id="cover">
+        <div class="page cover">
+            <div class="content">
+                <h1>Tischler &amp; Bruder</h1>
+                <span class="motto">Mobilier cu pasiune si profesionalism.</span>
+            </div>
+        </div>
     </div>
-    <div class="manabreak"></div>
-    <div class="about">
-        We're a small team of independent professionals
-        spending our free time making games we enjoy playing.
+
+
+    <div class="page-wrap" id="despre-noi">
+        <div class="page history">
+            <div class="content">
+                <h1>Despre Noi</h1>
+                <span class="text">
+                <b>Tischler &amp; Bruder Official</b> reprezintă visul şi pasiunea unui copil de 16 ani, care şi-a dorit
+                cu ardoare să lucreze lemnul. Visul i s-a îndeplinit, lucrând cot la cot cu meseriaşii saşi cu vechime
+                din oraş, el a început să descopere şi să realizeze cele mai frumoase piese de mobilier. Remus Moroşan,
+                creatorul firmei Tischler&Bruder Official şi-a văzut visul cu ochii, în momentul deschiderii firmei în
+                2003. Dragostea pentru lemn se poate vedea în mobilă de lux cu influenţe din perioada secolelor
+                XVIII-XIX, scări, uşi masive, mobilă de bucătărie, dormitoare, sufragerii, birouri,decoraţiuni (placări)
+                dar şi mobilier modern. Produsele oferite de Tischler&Bruder Official poartă amprenta înaltei calităţi.
+                Se folosesc esenţe de calitate, dintre care nu lipsesc cele de stejar, nuc, frasin, cireş şi esenţe
+                exotice la cerere. Finisajul de înalta calitate este obţinut prin folosirea unor produse naturale cum ar
+                fi ceara, patina. Pentru a se ajunge la produsul finit, este nevoie de 'patru treceri’ prin mâna
+                specialistului, în care produsul este dat cu patru straturi de lac şi finisat după fiecare strat, la
+                urmă se da şi o patina sau ceară şi este prelucrat, folosindu-se de multe ori de finisarea manuală.
+                    </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrap" id="galerie">
+        <div class="page gallery">
+            <div class="content">
+                <h1>Galerie</h1>
+                <div id="gallery-container">
+                </div>
+                <a href="https://www.facebook.com/TishlerBruder-Official-277135149020283/photos/" class="button-link">
+                    <div class="button">
+                        Vezi toată galeria
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrap" id="contact">
+        <div class="page contact">
+            <div class="content">
+                <h1>Contact</h1>
+                <div class="contact-items">
+                    <div class="item">
+                        <div class="icon-wrap"><i class="fa fa-user"></i></div>
+                        Moroşan Remus
+                    </div>
+                    <div class="item">
+                        <div class="icon-wrap"><i class="fa fa-map-marker"></i></div>
+                        <a href="https://www.google.ro/maps/place/45%C2%B043'01.9%22N+24%C2%B008'49.3%22E/@45.7170471,24.1465938,454m/data=!3m1!1e3!4m2!3m1!1s0x0:0x0?hl=en">Mihai
+                            Eminescu 42, Cisnădie, Sibiu</a>
+                    </div>
+                    <div class="item">
+                        <div class="icon-wrap"><i class="fa fa-facebook"></i></div>
+                        <a href="https://www.facebook.com/TishlerBruder-Official-277135149020283/">Tischler & Bruder
+                            Official</a>
+                    </div>
+                    <div class="item">
+                        <div class="icon-wrap"><i class="fa fa-phone"></i></div>
+                        0742 246157
+                    </div>
+
+                    <div class="item">
+                        <div class="icon-wrap"><i class="fa fa-envelope"></i></div>
+                        <a href="mailto:remusmorosan@yahoo.com">remusmorosan@yahoo.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrap">
+        <div class="page footer">
+            <div class="content">
+                <span class="first-line">
+                    Copyright © 2015 Tischler Und Bruder. All rights reserved. Designed and implemented by
+                    <a href="mailto:astronothing@gmail.com">Alexandru Pană</a>.
+                </span>
+                <span>Cover photo by <a
+                        href="https://www.flickr.com/photos/lythienhoang/16630535854/in/photolist-rkzQUN-tKCggZ-hz4fXg-nhc9uK-tfDP43-s3nRT3-dT7bj4-8bymgz-qZuuP9-wtLBXg-qBhLJu-a9eaWh-tifpjY-9zu9Mt-edtUsT-nBrzVe-kzCTUo-nfofUm-qocVqD-nvUvAj-qbSefo-m4gVBX-pRRiZC-wkhzeP-pcYRbC-9CoR5Q-kSKZVX-njUdod-bBf8VV-9FrJ63-bzeiCx-oVjX9V-cHSakh-twVxb7-4CQuN7-rYPfK2-4CQvm3-r8v5Go-nZcBwY-nKorBt-uJKD81-pFff9J-ndirQs-mPxtwn-ynx49p-xtGeH2-dj61ah-z63Ges-8EQ7SY-qoFnPv">Ly
+                    Thien Hoang (Lee)</a>
+                    licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY2.0</a></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    var galleryContainer = $("#gallery-container");
+
+    function galleryItemSize() {
+        var MAX_SIZE = 300;
+        var MIN_SIZE = 200;
+
+        var containerWidth = Math.min($(window).width(), galleryContainer.width());
+        var widths = [containerWidth, containerWidth / 2, containerWidth / 3];
+
+        if (MIN_SIZE <= widths[0] && widths[0] <= MAX_SIZE) return widths[0];
+        if (MIN_SIZE <= widths[1] && widths[1] <= MAX_SIZE) return widths[1];
+        if (MIN_SIZE <= widths[2] && widths[2] <= MAX_SIZE) return widths[2];
+        if (widths[0] <= MIN_SIZE) return widths[0];
+        return widths[0];
+    }
+
+    function initGallery() {
+        var size = galleryItemSize();
+        var margin = 10;
+
+        galleryContainer.empty();
+
+        Gallery.images.forEach(function (image, index) {
+            var imageComponent = $("<div>");
+            imageComponent.width(size - margin);
+            imageComponent.height(size - margin);
+            imageComponent.css("margin", margin / 2);
+            imageComponent.css("background-image", "url(" + image.thumbnail + ")");// 50% 50%; background-size: cover;");
+            imageComponent.css("background-size", "cover");
+            imageComponent.css("background-position", "50% 50%");
+            imageComponent.addClass("image-thumbnail");
+            imageComponent.on("click", function () {
+                openGallery(index)
+            });
+            galleryContainer.append(imageComponent);
+        });
+    }
+
+    function resizeGallery() {
+        var size = galleryItemSize();
+        var margin = 10;
+
+        galleryContainer.children().each(function (idx, image) {
+            image = $(image);
+            image.width(size - margin);
+            image.height(size - margin);
+        });
+
+    }
+
+    $(window).ready(initGallery);
+    $(window).resize(resizeGallery);
+
+    $(".navigation .item.despre-noi").on("click", function () {
+        $.scrollTo($("#despre-noi"), 800);
+    });
+    $(".navigation .item.galerie").on("click", function () {
+        $.scrollTo($("#galerie"), 800);
+    });
+    $(".navigation .item.contact").on("click", function () {
+        $.scrollTo($("#contact"), 800);
+    });
+
+    $(".navigation .item.cover").on("click", function () {
+        $.scrollTo($("#cover"), 800);
+    });
+
+    window.openGallery = function openGallery(index) {
+        var galleryElement = document.querySelectorAll('.pswp')[0];
+        var items = Gallery.images;
+
+        var options = {
+            closeEl: true,
+            captionEl: true,
+            fullscreenEl: false,
+            zoomEl: true,
+            shareEl: false,
+            counterEl: true,
+            arrowEl: true,
+            preloaderEl: true,
+            index: index,
+            showAnimationDuration: 333,
+            showHideOpacity: true,
+            getThumbBoundsFn: false,
+            addCaptionHTMLFn: function (item, captionEl, isFake) {
+                var caption = $(captionEl.children[0]);
+                caption.empty();
+
+                var title = $("<div>");
+                title.addClass('title');
+                title.html(item.title);
+
+                var description = $("<div>");
+                description.addClass('description');
+                description.html(item.description);
+
+                caption.append(title).append(description);
+            }
+        };
+
+        var gallery = new PhotoSwipe(galleryElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    };
+</script>
 </body>
 </html>
